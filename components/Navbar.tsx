@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { COLORS } from '../constants';
+import { COLORS } from '../constants.ts';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - Updated for better layout & aesthetics */}
+      {/* Mobile Menu Overlay */}
       <div 
         className={`fixed inset-0 bg-white z-[90] md:hidden transition-all duration-500 ease-in-out flex flex-col items-center justify-center ${
           isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-10 pointer-events-none'
@@ -128,7 +128,6 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         
-        {/* Subtle Background Mark */}
         <div className="absolute bottom-10 left-0 right-0 text-center opacity-5 select-none pointer-events-none">
             <h2 className="text-6xl font-serif-luxury uppercase tracking-widest">GLAM</h2>
         </div>

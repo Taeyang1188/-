@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { COLORS } from '../constants';
+import { COLORS } from '../constants.ts';
 
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative w-full overflow-hidden bg-white">
-      {/* Part 1: Hero Image Visual (Responsive height) */}
+      {/* Part 1: Hero Image Visual */}
       <div className="relative h-[75vh] sm:h-[85vh] md:h-screen w-full overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 w-full h-full">
           <img 
@@ -15,25 +15,21 @@ const Hero: React.FC = () => {
           />
         </div>
         
-        {/* Subtle Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent pointer-events-none"></div>
 
-        {/* Responsive Background Title */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none px-4">
             <h1 className="text-[18vw] md:text-[12vw] font-serif-luxury font-medium text-gray-900/5 select-none uppercase tracking-tighter text-center leading-none">
                 GLAM EYEWEAR
             </h1>
         </div>
 
-        {/* Animated Scroll Indicator */}
         <div className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 md:gap-4 animate-bounce opacity-40">
             <span className="text-[8px] md:text-[10px] tracking-[0.5em] uppercase font-bold text-gray-900">Scroll</span>
             <div className="w-px h-6 md:h-12 bg-gray-400"></div>
         </div>
       </div>
 
-      {/* Part 2: Introduction & CTA Section (Responsive spacing) */}
       <div className="relative z-10 bg-white py-12 sm:py-24 md:py-32 px-6 flex flex-col items-center text-center">
         <div className="max-w-4xl mx-auto space-y-6 md:space-y-12 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <div className="flex flex-col items-center">
@@ -74,7 +70,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Decorative Branding Elements - Visible from tablet up */}
       <div className="absolute top-[85vh] left-6 lg:left-12 hidden sm:block">
         <div className="h-16 lg:h-32 w-px bg-gradient-to-b from-gray-200 to-transparent"></div>
       </div>

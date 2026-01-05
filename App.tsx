@@ -1,13 +1,13 @@
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import AboutSection from './components/AboutSection';
-import BrandSection from './components/BrandSection';
-import FeaturesSection from './components/FeaturesSection';
-import InfoSection from './components/InfoSection';
-import Footer from './components/Footer';
-import { COLORS } from './constants';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import AboutSection from './components/AboutSection.tsx';
+import BrandSection from './components/BrandSection.tsx';
+import FeaturesSection from './components/FeaturesSection.tsx';
+import InfoSection from './components/InfoSection.tsx';
+import Footer from './components/Footer.tsx';
+import { COLORS } from './constants.ts';
 
 const App: React.FC = () => {
   return (

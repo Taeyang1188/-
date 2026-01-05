@@ -1,11 +1,10 @@
 
 import React from 'react';
 import { MapPin, Clock, Car, ExternalLink } from 'lucide-react';
-import { COLORS } from '../constants';
+import { COLORS } from '../constants.ts';
 
 const InfoSection: React.FC = () => {
   const MAP_URL = "https://maps.app.goo.gl/qkRERC8QWg56f8kf8";
-  // Refined embed URL for Glam Eyewear (글램아이웨어)
   const EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.240726744211!2d126.91728!3d37.549219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98da1c51480d%3A0xc39f997787c88a80!2z6riA656M7JWE7J207Juo7Ja0!5e0!3m2!1sko!2skr!4v1714041724000!5m2!1sko!2skr";
 
   return (
@@ -86,7 +85,6 @@ const InfoSection: React.FC = () => {
                     className="pointer-events-none"
                 ></iframe>
                 
-                {/* Clickable Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/5 transition-colors cursor-pointer">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 backdrop-blur-md px-6 py-3 shadow-xl flex items-center gap-3">
                         <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-black">Click to View on Maps</span>

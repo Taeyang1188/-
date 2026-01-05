@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BRANDS, COLORS } from '../constants';
+import { BRANDS, COLORS } from '../constants.ts';
 
 const BrandSection: React.FC = () => {
   return (
@@ -60,7 +60,6 @@ const BrandSection: React.FC = () => {
                     )}
                 </div>
             ))}
-            {/* Aesthetic padding for desktop grid */}
             <div className="hidden lg:flex border-r border-b border-white/10 items-center justify-center bg-white/5 opacity-20">
                <div className="w-1 h-1 bg-white rounded-full"></div>
             </div>

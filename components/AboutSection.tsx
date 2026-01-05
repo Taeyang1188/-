@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { COLORS } from '../constants';
+import { COLORS } from '../constants.ts';
 import { ArrowRight } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
