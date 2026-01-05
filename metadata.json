@@ -1,0 +1,7 @@
+{
+  "name": "Glam Eyewear (글램아이웨어)",
+  "description": "Premium eyewear select shop in Hongdae/Hapjeong focusing on professional eye examination and functional lenses.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
