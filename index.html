@@ -4,48 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glam Eyewear | 글램아이웨어</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>글램아이웨어 | 홍대 합정 정밀 시력검사 안경원</title>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="2JJM3WxoYCnTepMKpW8_LSeCy7fZh_KJ4Gbz1ACYWYw">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="홍대 합정 사이 9년 노하우의 정밀 시력검사 전문 안경원 글램아이웨어. 오래 써도 눈이 편안한 프리미엄 하우스 브랜드 안경을 만나보세요.">
+    <meta name="keywords" content="글램아이웨어, 홍대안경원, 합정안경원, 정밀시력검사, 하우스브랜드안경, 래쉬안경, 스틸러안경, 니로안경">
+    <link rel="canonical" href="https://glameyewear.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glameyewear.com">
+    <meta property="og:title" content="글램아이웨어 | 눈이 편안한 시력검사 전문 안경원">
+    <meta property="og:description" content="단순히 도수를 맞추는 것이 아닌, 일상의 편안함을 설계합니다.">
+    <meta property="og:image" content="https://i.imgur.com/czF3jl9.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://glameyewear.com">
+    <meta property="twitter:title" content="글램아이웨어 | Premium Eyewear Lab">
+    <meta property="twitter:description" content="홍대 정밀 시력검사 전문 안경원. 프리미엄 하우스 브랜드 컬렉션.">
+    <meta property="twitter:image" content="https://i.imgur.com/czF3jl9.png">
+
+    <!-- Preconnect & Priority Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://i.imgur.com/czF3jl9.png" as="image" fetchpriority="high">
+    
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OpticalBusiness",
+      "name": "글램아이웨어",
+      "image": "https://i.imgur.com/6cJ3Lv2.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "어울마당로5길 23 빌딩 2F",
+        "addressLocality": "마포구",
+        "addressRegion": "서울",
+        "postalCode": "04048",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.549219,
+        "longitude": 126.91728
+      },
+      "url": "https://glameyewear.com",
+      "telephone": "+82-2-322-1002",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Friday", "Saturday"],
+          "opens": "11:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "20:00"
+        }
+      ]
+    }
+    </script>
+
     <style>
         body {
             font-family: 'Inter', 'Noto Sans KR', sans-serif;
             background-color: #fbfbfb;
             color: #1a1a1a;
+            scroll-behavior: smooth;
         }
-        .font-serif-luxury {
-            font-family: 'Bodoni Moda', serif;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ac8137;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8c692b;
-        }
+        .font-serif-luxury { font-family: 'Bodoni Moda', serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #ac8137; border-radius: 10px; }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
-  }
-}
-</script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="root"></div>
-    <!-- 엔트리 포인트 스크립트 추가 -->
     <script type="module" src="./index.tsx"></script>
 </body>
 </html>
