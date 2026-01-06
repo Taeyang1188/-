@@ -1,5 +1,4 @@
-
 User-agent: *
 Allow: /
 
-Sitemap: https://glameyewear.com/sitemap.xml
+Sitemap: https://glameyewear.netlify.app/sitemap.xml
