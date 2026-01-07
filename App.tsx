@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
 import AboutSection from './components/AboutSection.tsx';
@@ -10,6 +10,39 @@ import Footer from './components/Footer.tsx';
 import { COLORS } from './constants.ts';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const triggerIndexNow = async () => {
+      const KEY = '7425fceee01d4ed78035422eb68d0a7e';
+      const URL = 'https://glameyewear.netlify.app/';
+      const LAST_PING_KEY = 'last_indexnow_ping';
+      
+      const lastPing = localStorage.getItem(LAST_PING_KEY);
+      const today = new Date().toDateString();
+
+      // 하루에 한 번만 핑을 보냅니다.
+      if (lastPing !== today) {
+        try {
+          // IndexNow는 여러 검색 엔진에 공유되지만, 주요 타겟인 Bing과 Naver에 직접 통지합니다.
+          const endpoints = [
+            `https://www.bing.com/indexnow?url=${encodeURIComponent(URL)}&key=${KEY}`,
+            `https://search.naver.com/indexnow?url=${encodeURIComponent(URL)}&key=${KEY}`
+          ];
+
+          await Promise.all(endpoints.map(endpoint => 
+            fetch(endpoint, { mode: 'no-cors' }) // no-cors로 정책 이슈 방지
+          ));
+          
+          localStorage.setItem(LAST_PING_KEY, today);
+          console.log('IndexNow ping sent successfully.');
+        } catch (error) {
+          console.error('IndexNow ping failed:', error);
+        }
+      }
+    };
+
+    triggerIndexNow();
+  }, []);
+
   return (
     <div className="antialiased selection:bg-[#F7BD5C] selection:text-[#291C07]">
       <Navbar />
