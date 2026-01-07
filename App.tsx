@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar.tsx';
 import Hero from './components/Hero.tsx';
@@ -13,29 +12,37 @@ const App: React.FC = () => {
   useEffect(() => {
     const triggerIndexNow = async () => {
       const KEY = '7425fceee01d4ed78035422eb68d0a7e';
-      const URL = 'https://glameyewear.netlify.app/';
+      const HOST = 'https://glameyewear.netlify.app';
+      const URL_TO_INDEX = `${HOST}/`;
+      const KEY_LOCATION = `${HOST}/${KEY}.txt`;
       const LAST_PING_KEY = 'last_indexnow_ping';
       
       const lastPing = localStorage.getItem(LAST_PING_KEY);
       const today = new Date().toDateString();
 
-      // 하루에 한 번만 핑을 보냅니다.
+      // 하루에 한 번만 실행하여 서버 부하 방지 및 효율적인 인덱싱 유도
       if (lastPing !== today) {
         try {
-          // IndexNow는 여러 검색 엔진에 공유되지만, 주요 타겟인 Bing과 Naver에 직접 통지합니다.
+          // 네이버 서치어드바이저 및 Bing 전용 IndexNow 엔드포인트
           const endpoints = [
-            `https://www.bing.com/indexnow?url=${encodeURIComponent(URL)}&key=${KEY}`,
-            `https://search.naver.com/indexnow?url=${encodeURIComponent(URL)}&key=${KEY}`
+            `https://searchadvisor.naver.com/indexnow?url=${encodeURIComponent(URL_TO_INDEX)}&key=${KEY}&keyLocation=${encodeURIComponent(KEY_LOCATION)}`,
+            `https://www.bing.com/indexnow?url=${encodeURIComponent(URL_TO_INDEX)}&key=${KEY}&keyLocation=${encodeURIComponent(KEY_LOCATION)}`
           ];
 
+          // fetch를 사용하여 검색 엔진에 핑을 보냅니다. 
+          // mode: 'no-cors'는 브라우저의 보안 정책(CORS)으로 인해 요청이 차단되는 것을 방지합니다.
           await Promise.all(endpoints.map(endpoint => 
-            fetch(endpoint, { mode: 'no-cors' }) // no-cors로 정책 이슈 방지
+            fetch(endpoint, { 
+              method: 'GET',
+              mode: 'no-cors',
+              cache: 'no-cache'
+            })
           ));
           
           localStorage.setItem(LAST_PING_KEY, today);
-          console.log('IndexNow ping sent successfully.');
+          console.log('IndexNow notification sent to Naver and Bing.');
         } catch (error) {
-          console.error('IndexNow ping failed:', error);
+          console.error('IndexNow notification failed:', error);
         }
       }
     };
