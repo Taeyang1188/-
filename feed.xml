@@ -1,14 +1,18 @@
-
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>글램아이웨어 (Glam Eyewear) 업데이트</title>
-  <link>https://glameyewear.com</link>
-  <description>홍대/합정 정밀 시력검사 및 프리미엄 하우스 브랜드 안경 소식</description>
+  <title>글램아이웨어 (Glam Eyewear) - 홍대 정밀 시력검사 안경원</title>
+  <link>https://glameyewear.netlify.app/</link>
+  <description>홍대 합정 사이 9년 노하우, 오래 써도 눈이 편안한 프리미엄 하우스 브랜드 안경 전문점 업데이트 소식</description>
+  <language>ko-kr</language>
+  <lastBuildDate>Wed, 05 Mar 2025 10:00:00 +0900</lastBuildDate>
+  <atom:link href="https://glameyewear.netlify.app/feed.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title>2024년 신규 하우스 브랜드 컬렉션 입고</title>
-    <link>https://glameyewear.com/#brands</link>
-    <description>래쉬, 스틸러, 니로 등 프리미엄 브랜드의 신상 라인업이 입고되었습니다.</description>
+    <title>2025년 신규 하우스 브랜드 컬렉션 및 정밀 검안 시스템 안내</title>
+    <link>https://glameyewear.netlify.app/#brands</link>
+    <description>래쉬(LASH), 스틸러, 니로 등 프리미엄 브랜드의 2025년 신상 라인업이 입고되었습니다. 9년 노하우의 정밀 시력검사로 일상의 편안함을 설계해 드립니다.</description>
+    <pubDate>Wed, 05 Mar 2025 10:00:00 +0900</pubDate>
+    <guid isPermaLink="false">glam-eyewear-update-2025-03-05</guid>
   </item>
 </channel>
 </rss>
